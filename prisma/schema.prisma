@@ -1,0 +1,29 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Project {
+  id           String   @id @default(cuid())
+  title        String
+  description  String
+  category     String   @default("Web App")
+  subcategory  String   @default("")
+  techStack    String   @default("")
+  imageUrl     String   @default("")
+  documentName String   @default("")
+  documentUrl  String   @default("")
+  projectUrl   String   @default("")
+  repoUrl      String   @default("")
+  year         String   @default("")
+  status       String   @default("Selesai")
+  featured     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
