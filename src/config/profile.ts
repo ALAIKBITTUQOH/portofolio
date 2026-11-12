@@ -1,10 +1,3 @@
-
-/**
- * Konfigurasi profil pemilik portofolio.
- * Ganti nilai di file ini untuk menyesuaikan seluruh konten situs
- * (nama, kontak, sosial media, keahlian, dan kategori proyek).
- */
-
 export interface SocialLink {
   label: string;
   href: string;
