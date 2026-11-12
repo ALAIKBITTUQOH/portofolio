@@ -1,4 +1,4 @@
-# Portofolio — Full-Stack Developer
+# Portofolio
 
 Website portofolio pribadi single-page (Bahasa Indonesia) yang dibangun dengan **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, **shadcn/ui**, **Framer Motion**, dan **Prisma (SQLite)**.
 
