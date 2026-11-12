@@ -1,0 +1,281 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Mode terang: putih bersih dengan aksen ungu-violet */
+  --background: oklch(0.99 0.004 315);
+  --foreground: oklch(0.17 0.02 300);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.17 0.02 300);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.17 0.02 300);
+  --primary: oklch(0.541 0.253 293.009); /* violet-600 */
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.96 0.012 300);
+  --secondary-foreground: oklch(0.26 0.04 300);
+  --muted: oklch(0.96 0.008 300);
+  --muted-foreground: oklch(0.52 0.025 300);
+  --accent: oklch(0.95 0.02 300);
+  --accent-foreground: oklch(0.26 0.04 300);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.9 0.015 300);
+  --input: oklch(0.9 0.015 300);
+  --ring: oklch(0.606 0.25 292.717); /* violet-500 */
+  --chart-1: oklch(0.606 0.25 292.717); /* violet-500 */
+  --chart-2: oklch(0.666 0.295 322.15); /* fuchsia-500 */
+  --chart-3: oklch(0.705 0.213 47.604); /* orange-500 */
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.541 0.253 293.009);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.606 0.25 292.717);
+}
+
+.dark {
+  /* Mode gelap sesuai referensi: latar hitam pekat dengan sentuhan ungu */
+  --background: oklch(0.145 0.014 300);
+  --foreground: oklch(0.97 0.005 300);
+  --card: oklch(0.19 0.018 300);
+  --card-foreground: oklch(0.97 0.005 300);
+  --popover: oklch(0.19 0.018 300);
+  --popover-foreground: oklch(0.97 0.005 300);
+  --primary: oklch(0.702 0.183 293.541); /* violet-400 */
+  --primary-foreground: oklch(0.16 0.04 300);
+  --secondary: oklch(0.26 0.02 300);
+  --secondary-foreground: oklch(0.97 0.005 300);
+  --muted: oklch(0.25 0.016 300);
+  --muted-foreground: oklch(0.71 0.02 300);
+  --accent: oklch(0.27 0.03 300);
+  --accent-foreground: oklch(0.97 0.005 300);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.606 0.25 292.717); /* violet-500 */
+  --chart-1: oklch(0.606 0.25 292.717);
+  --chart-2: oklch(0.666 0.295 322.15);
+  --chart-3: oklch(0.705 0.213 47.604);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.19 0.018 300);
+  --sidebar-foreground: oklch(0.97 0.005 300);
+  --sidebar-primary: oklch(0.702 0.183 293.541);
+  --sidebar-primary-foreground: oklch(0.16 0.04 300);
+  --sidebar-accent: oklch(0.27 0.03 300);
+  --sidebar-accent-foreground: oklch(0.97 0.005 300);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.606 0.25 292.717);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background-color: oklch(0.606 0.25 292.717 / 0.35);
+  }
+}
+
+@layer utilities {
+  /* Pola grid halus untuk latar hero (nuansa ungu) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(0.62 0.2 300 / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.62 0.2 300 / 0.08) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  /* Teks gradasi aksen ungu → fuchsia → oranye (animasi bergeser halus) */
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-600 via-fuchsia-600 to-orange-500 bg-clip-text text-transparent;
+    background-size: 220% auto;
+    animation: gradient-shift 7s ease-in-out infinite;
+  }
+  .dark .text-gradient {
+    @apply from-violet-400 via-fuchsia-400 to-orange-400;
+  }
+
+  /* Kilau sapuan pada tombol utama */
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 42%,
+      rgb(255 255 255 / 0.28) 50%,
+      transparent 58%
+    );
+    transform: translateX(-130%);
+    transition: transform 0.75s ease;
+    pointer-events: none;
+  }
+  .btn-shine:hover::after {
+    transform: translateX(130%);
+  }
+
+  /* Blob latar yang bergeser sangat lambat */
+  .animate-blob {
+    animation: blob-drift 20s ease-in-out infinite;
+  }
+  .animate-blob-slow {
+    animation: blob-drift 26s ease-in-out infinite reverse;
+  }
+  .animate-blob-alt {
+    animation: blob-drift-alt 24s ease-in-out infinite;
+  }
+
+  /* Rotasi sangat lambat untuk cincin dekoratif */
+  .animate-spin-slow {
+    animation: spin-slow 16s linear infinite;
+  }
+
+  /* Bergetar halus saat muncul (badge hero) */
+  .animate-wiggle {
+    animation: wiggle 2.4s ease-in-out infinite;
+  }
+
+  /* Scrollbar tipis untuk konten yang bisa digulir (mis. dialog) */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.62 0.16 300 / 0.4) transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: oklch(0.62 0.16 300 / 0.4);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(0.62 0.2 300 / 0.6);
+  }
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -24px) scale(1.08);
+  }
+  66% {
+    transform: translate(-24px, 18px) scale(0.94);
+  }
+}
+
+@keyframes blob-drift-alt {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-30px, -20px) scale(1.1);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient,
+  .animate-blob,
+  .animate-blob-slow,
+  .animate-blob-alt,
+  .animate-spin-slow,
+  .animate-wiggle {
+    animation: none;
+  }
+}
+
+/* end of globals */

@@ -1,0 +1,22 @@
+PANDUAN PRATINJAU MICROSOFT OFFICE
+
+Sistem pratinjau Office telah diperbarui dan TIDAK mewajibkan instalasi LibreOffice.
+
+1. Saat portofolio dibuka melalui hosting/domain publik:
+   - DOC, DOCX, XLS, XLSX, PPT, PPTX, ODT, ODS, ODP, dan RTF diarahkan ke Microsoft Office Online Viewer.
+   - File yang diunggah ke portofolio disajikan melalui URL API publik agar layanan Microsoft dapat mengambil file tersebut.
+   - Pastikan domain dan endpoint file dapat diakses dari internet tanpa login, firewall, atau proteksi bot yang memblokir Microsoft.
+
+2. Saat dijalankan melalui localhost:
+   - DOCX ditampilkan menggunakan pembaca browser Mammoth.
+   - XLS/XLSX ditampilkan menggunakan SheetJS sebagai tabel data.
+   - PPTX ditampilkan dengan mengekstrak teks dari setiap slide.
+   - Pratinjau lokal merupakan alternatif ringan; tata letak kompleks, gambar, grafik, animasi, rumus interaktif, dan beberapa fitur Office mungkin tidak tampil sama persis.
+   - Format Office lama DOC/PPT serta OpenDocument/RTF belum didukung oleh pembaca lokal ini; unduh file untuk membukanya dengan aplikasi yang sesuai.
+
+3. PDF tetap menggunakan pratinjau PDF bawaan browser.
+4. Tombol Download file tetap mengunduh file asli, bukan hasil konversi.
+5. Tidak perlu menjalankan INSTALL-LIBREOFFICE.bat. LibreOffice boleh tetap terpasang, tetapi tidak digunakan oleh alur pratinjau ini.
+
+CATATAN MICROSOFT OFFICE ONLINE
+Microsoft Office Online Viewer memerlukan URL HTTPS yang dapat diakses publik. Viewer tidak dapat mengambil file dari localhost. Karena itu, localhost menggunakan pembaca alternatif di browser, sedangkan hosting online menggunakan Microsoft Office Online Viewer.
